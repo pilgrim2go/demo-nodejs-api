@@ -9,6 +9,10 @@ server.get('/hello/:name', function(req, res, next) {
   res.send('hello ' + req.params.name);
   next();
 });
+server.get('/goodbye/:name', function(req, res, next) {
+  res.send('goodbye ' + req.params.name);
+  next();
+});
 
 // Ping endpoint.
 server.get('/ping/:server', function(req, res, next) {
